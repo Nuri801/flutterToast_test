@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_toast/pages/home_page.dart';
+import 'package:flutter_toast/pages/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,9 +13,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        scaffoldBackgroundColor: Colors.blueGrey,
+
+        scaffoldBackgroundColor: Colors.white,
         // This is the theme of your application.
         //
         // Try running your application with "flutter run". You'll see the
@@ -26,7 +29,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blueGrey,
       ),
-      home: HomePage(),
+      home: Splash(),
     );
   }
 }
