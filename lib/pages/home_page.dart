@@ -12,34 +12,37 @@ class HomePage extends StatelessWidget {
     deviceWidth = MediaQuery.of(context).size.width;
     deviceHeight = MediaQuery.of(context).size.height;
 
-    return homePageUI();
+    return homePageUI(context);
   }
 
-  Widget homePageUI() {
-    return Scaffold(
-      // appBar: AppBar(
-      //   title: const Text('Flutter Toast', style: kAppBarTextStyle,),
-      // ),
-      body: Container(
-        height: deviceHeight,
-        width: deviceHeight,
-        // color: Colors.blueGrey,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          mainAxisSize: MainAxisSize.max,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            doosanLogo(),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                textFormID(),
-                textFormPW(),
-                logInButton(),
-              ],
-            ),
-            findPWButton(),
-          ],
+  Widget homePageUI(BuildContext context) {
+    return GestureDetector(
+      onTap: () {FocusScope.of(context).unfocus();},
+      child: Scaffold(
+        // appBar: AppBar(
+        //   title: const Text('Flutter Toast', style: kAppBarTextStyle,),
+        // ),
+        body: Container(
+          height: deviceHeight,
+          width: deviceHeight,
+          // color: Colors.blueGrey,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisSize: MainAxisSize.max,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              doosanLogo(),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  textFormID(),
+                  textFormPW(),
+                  logInButton(),
+                ],
+              ),
+              findPWButton(),
+            ],
+          ),
         ),
       ),
     );
