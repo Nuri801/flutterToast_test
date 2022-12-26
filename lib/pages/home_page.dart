@@ -26,22 +26,24 @@ class HomePage extends StatelessWidget {
           height: deviceHeight,
           width: deviceHeight,
           // color: Colors.blueGrey,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            mainAxisSize: MainAxisSize.max,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              doosanLogo(),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  textFormID(),
-                  textFormPW(),
-                  logInButton(),
-                ],
-              ),
-              findPWButton(),
-            ],
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisSize: MainAxisSize.max,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                doosanLogo(),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    textFormID(),
+                    textFormPW(),
+                    logInButton(),
+                  ],
+                ),
+                findPWButton(),
+              ],
+            ),
           ),
         ),
       ),
